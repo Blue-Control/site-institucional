@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Control - Simulador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #9595f0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+        #header {
+            background-color: #e1d789;
+            height: 20vh;
+            width: 90%;
+            margin: 10px 5%;
+            border: #2c2c72 solid 4px;
+            border-radius: 12px;
+        }
+
+        #img {
+            height: 100%;
+            float: left;
+        }
+
+        #h1_titulo {
+            float: left;
+            margin: 4% 0 0 26%;
+            color: #252525;
+        }
+
+        #conteudo {
+            background-color: #2c2c72;
+            width: 80vw;
+            height: 60vh;
+            margin-left: 10%;
+            border-radius: 12px;
+            color: #ede3e3;
+        }
+
+        #div_inp_qtd {
+            float: left;
+            margin: 4% 0 0 30%;
+        }
+
+        #inp_qtd {
+            border-radius: 7px;
+            border: #ede3e3 solid 2px;
+        }
+
+        #div_inp_valor {
+            float: left;
+            margin: 2% 0 0 37%;
+        }
+
+        #inp_valor {
+            border-radius: 7px;
+            border: #ede3e3 solid 2px;
+        }
+
+        #div_inp_tanque {
+            float: left;
+            margin: 2% 0 0 36%;
+        }
+
+        #inp_tanque {
+            border-radius: 7px;
+            border: #ede3e3 solid 2px;
+        }
+
+        button{
+            margin: 7% 0 0 40%;
+            border: none;
+            background-color: #ede3e3;
+            border-radius: 12px;
+            height: 30px;
+            background-color: #e1d789;
+        }
+
+        #res{
+            float: right;
+            margin-top: -20%;
+            margin-right: 4%;
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <!-- caixa com logo e título --> 
+
+    <div id="header">
+        <img src="azul.png" id="img">
+        <h1 id="h1_titulo">Simulador Financeiro</h1>
+    </div>
+    <br>
+
+    <!-- caixa com todos os inputs + resultados -->
+
+    <div id="conteudo">
+
+        <div id="div_inp_qtd">
+            <h4>
+                Quantidade produzida em kg (1 tanque): <input id="inp_qtd" type="number" placeholder="kg por tanque">
+            </h4>
+        </div>
+
+        <br>
+
+        <div id="div_inp_valor">
+            <h4>
+                Preço do kg vendido: <input id="inp_valor" type="number" placeholder="valor por kg">
+            </h4>
+        </div>
+
+        <br>
+
+        <div id="div_inp_tanque">
+            <h4>
+                Quantidade de tanques: <input id="inp_tanque" type="number" placeholder="qtd de tanques">
+            </h4>
+            <button id="botao" onclick="calcular()"><b>Calcular</b></button>
+        </div>
+
+        <br>
+
+        <div id="res"></div>
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    function calcular(){
+        var qtd = Number(inp_qtd.value);
+        var preco = Number(inp_valor.value);
+        var tanque = Number(inp_tanque.value);
+
+        var total = qtd * preco * tanque;
+        var sem_projeto = total - (total / 100 * 15);
+        var projeto = total - (total / 100 * 2);
+        var perda = projeto - sem_projeto;
+        var porc = (projeto * 100 / sem_projeto - 100);
+
+        
+        res.innerHTML = `
+        <b style="color: #ede3e3;">Receita sem o projeto <i>Blue Control</i>: R$${sem_projeto}</b> <br> <br>
+        <b style="color: #ede3e3;">Receita com o projeto <i>Blue Control</i>: R$${projeto}</b> <br> <br>
+        <b style="color: #ede3e3;">Deixando de ganhar: R$${perda}</b> <br> <br>
+        <b style="color: #ede3e3;">Com a obtenção do nosso projeto, estaria ganhando ${porc.toFixed(2)}% a mais</b> 
+        `
+
+        div_inp_qtd.style.marginLeft = '2%'
+        div_inp_qtd.style.width = '50%'
+    
+        div_inp_valor.style.marginLeft = '2%'
+        div_inp_valor.style.width = '50%'
+
+        div_inp_tanque.style.marginLeft = '2%'
+        div_inp_tanque.style.width = '50%'
+        botao.style.marginLeft = '2%'
+    }   
+    
+</script>
