@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Control- Simuladora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--
+    Lucao Bandtec: Calculadora:
+ Lucao Bandtec: 1 input - quantidade em kg q o cliente produz
+ Lucao Bandtec: 1 input - preço do kg da tilápia q ele vende
+ Lucao Bandtec: Contas:
+ Lucao Bandtec: Quantidade x Preço - 10% desse valor(perda segunda a notícia)
+ Lucao Bandtec: Valor q o cliente produz sem o nosso produto
+ Lucao Bandtec: Quantidade x Preço - 2% desse valor(perda com o nosso produto)
+ Lucao Bandtec: Valor produzido com o nosso produto
+ Lucao Bandtec: Sugestão*
+ Lucao Bandtec: Aproveitar pra calcular o orçamento total, com o total que a gente vai cobrar pelo serviço
+    -->
+    <div id="box_titulo">
+        <h2 id="titulo"> Blue Control - Simulação </h2>
+        <br>
+        <img src="logo2.png">
+    </div>
+
+    <div id="box_input">
+
+        <span id="span_1"> Quantidade produzida em Kg (1 tanque): </span> <input  type="text"
+            id="qtde_produzida"> <br>
+        <span id="span_2"> Preço do Kg vendido (1 tanque): </span> <input  type="text" id="preco_kg"> <br>
+
+        <span id="span_3"> Quantidade de tanques : </span> <input  type="text" id="qtde_tanques"><br>
+
+        <button onclick="calcular()"> calcular</button>
+        <br>
+
+    </div>
+
+    <div id="resultado">
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+
+        var producao_kg = Number(qtde_produzida.value);
+        var venda_kg = Number(preco_kg.value);
+        var tanques = Number(qtde_tanques.value)
+
+        var sem_perda = producao_kg * venda_kg * tanques
+        var com_perda = (sem_perda * 0.10) 
+        var com_blue_control = (sem_perda * 0.02) 
+        var lucro = com_perda - com_blue_control ;
+
+        alert("Confira o resultado abaixo ");
+
+        resultado.style.display = "block"
+
+        resultado.innerHTML = `<span id="span_4">Sem nenhuma perda sua receita seria de R$${sem_perda.toFixed(2)} 
+                            </span><br><br>
+                            <span id="span_5">Atualmente você perde <b style="color:yellow">R$${com_perda.toFixed(2)}</b></span> <br><br>
+                            <span id="span_6"> Com a Blue Control você perderia somente <b style="color:green">R$${com_blue_control}</b></span> <br><br>
+                            <span id="span_7"> Gerando um lucro de <b style="color:aquamarine">R$${lucro.toFixed(2)}</b></span>
+                            `
+    }
+</script>

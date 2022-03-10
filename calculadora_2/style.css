@@ -1,0 +1,133 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #a1a09e88;
+}
+
+#box_titulo{
+    margin: 2% 5%;
+    width: 90%;
+    height: 300px;
+    background: linear-gradient(to left, #f09819, #edde5d);
+    border: 2px black outset;
+    border-radius: 8px;
+    
+}
+
+#titulo{
+ font-size: 26px;
+ margin-left: 37%;
+}
+
+img{
+    margin-left: 42.5%;
+    width: 15%;
+
+}
+
+#box_input{
+    margin: 5% 5%;
+    width: 90%;
+    height: 600px;
+    background: linear-gradient(to left, #0f0c29, #302b63, #24243e);
+    border: 2px black outset;
+    border-radius: 8px;
+    color: white;
+}
+
+#span_1{
+ 
+    font-size: 22px;
+    margin-left: 30%;
+}
+
+#span_2{
+
+    font-size: 22px;
+    margin-left: 30%;
+}
+
+#span_3{
+   
+    font-size: 22px;
+    margin-left: 30%;
+}
+
+
+#qtde_produzida{
+    
+        width: 200px;
+        height: 3.5%;
+        border-radius: 8px;
+        border-style: none;
+        margin-bottom: 5%;
+        margin-top: 5%;
+        margin-left: 3%;
+      
+}
+
+
+#preco_kg{
+    
+    width: 200px;
+    height: 3.5%;
+    border-radius: 8px;
+    border-style: none;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-left: 10.3%;
+   
+}
+
+
+#qtde_tanques{
+    
+    width: 200px;
+    height: 3.5%;
+    border-radius: 8px;
+    border-style: none;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-left: 17%;
+   
+}
+button{
+    width: 150px;
+    height: 50px;
+    margin-left: 35%;
+    border: 2px outset black;
+    border-radius: 8px;
+    background-color: #edde5dda;
+    font-size: 20px;
+}
+
+#resultado{
+    width: 50%;
+    margin: 5% 5%;
+    width: 90%;
+    height: 200px;
+    background: linear-gradient(to top, #232526, #414345);
+    border: 2px black outset;
+    border-radius: 8px;
+    color: white;
+    display: none;
+}
+#span_4{
+   
+    font-size: 18px;
+    margin-left: 30%;
+}
+#span_5{
+   
+    font-size: 18px;
+    margin-left: 30%;
+}
+#span_6{
+   
+    font-size: 18px;
+    margin-left: 30%;
+}
+#span_7{
+   
+    font-size: 18px;
+    margin-left: 30%;
+}
