@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Financeiro</title>
+    <style> 
+        body{
+            background-image: url('fundo.jpg'); 
+            background-repeat: no-repeat; 
+            background-size: cover; 
+        }
+
+        #titulos {
+            margin: 2% 5%; 
+            height: 47vh;
+            width: 90%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: whitesmoke;
+        }
+        h1 {
+            margin-left: 37%;
+        }
+
+        h2 {
+            margin-left: 27%;
+        }
+        
+        img {
+            margin-left: 40.5%;
+        } 
+        
+        #inputs {
+            margin-left: 14%; 
+            height: 40vh;
+             width: 70%; 
+             color: white;
+        }
+
+        span {
+            margin-left: 25%;
+            font-size: x-large;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif 
+        }
+
+        input {
+            border: 2px black outset; 
+            border-radius: 5px; 
+            width: 130px; 
+            height: 18px;
+        } 
+
+        button {
+            float: left; 
+            border: black 3px; 
+            background-color: #ff6300 ; 
+            color: white; 
+            border-style: outset;
+            font-size: x-large; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            width: 55%; 
+            height: 50px; 
+            margin-left: 25%; 
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="titulos"> <h1>Simulador Financeiro </h1>
+    <h2> Calcule o quanto você vai lucrar com a Blue Control!</h2> <img src="logo.png"> </div>
+
+    <div id="inputs">
+        <br>
+    <span > Quantidade Produzida em Kg:  <input id="qtdproduzida" type="number"> 
+    </span>  <br> <br>
+    <span > Preço do Kg da Tilápia: <input id="precotilapia" type="number"> </span> <br> <br> 
+    <span > Total de tanques: <input id="tanque" type="number"> <br> <br>
+
+    <button onclick="contas()"> Calcular </button> <br> <br> <br>
+    <div id="resultado"></div> </div>
+</body>
+</html>
+
+<script>    
+    function contas(){
+        var qtd = Number(qtdproduzida.value)
+        var preco = Number(precotilapia.value)
+        var tanques = Number(tanque.value)
+        var precototal = qtd * preco * tanques
+        var perdaatual = precototal * 0.10
+        var perdablue =  precototal * 0.02
+        var perdatotal = perdaatual - perdablue  
+        
+    resultado.innerHTML = `<div style = "background-color:#ede3ef9c; width: 70%; margin-left: 20%; border: 2px black outset; border-radius: 5px; height: 135px;">
+    <span style="color: black;"> <span style ="margin-left: 7.5%; float: left; margin-top: 2%;" > O lucro total é de <b> R$ ${precototal.toFixed(2)} </b> </span>
+    <br> 
+    <span style="color: black; margin-left: 7.5%; margin-top: 0.5%;  float: left;"> Atualmente sua perda é de <b> R$ ${perdaatual.toFixed(2)} </span> </b>  
+    <br>
+    <span style="color: black; margin-left: 7.5%; float: left; margin-top: 0.5%;"> Com a Blue Control sua perda será de <b> R$ ${perdablue.toFixed(2)} </b> </span>  <br>
+    <span style="color: black; margin-left: 7.5%; float: left; margin-top: 0.5%;"> Gerando assim um lucro de <b> R$${perdatotal.toFixed(2)} </span> </b> </div>  `
+    }
+</script> 
