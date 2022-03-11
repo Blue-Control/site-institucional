@@ -7,143 +7,128 @@
     <title>Calculadora</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
 
-  <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+      }
 
-body {
-  font-size: 100%;
-  background-color: #d9afd9;
-  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
+      body {
+        background-color: rgb(100, 233, 226);
+        background: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
 
-.conteudo-principal-escrito {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-image: linear-gradient(
-    132.6deg,
-    rgba(71, 139, 214, 1) 23.3%,
-    rgba(37, 216, 211, 1) 84.7%
-  );
+      .conteudo-principal-escrito {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-image: linear-gradient(
+          132.6deg,
+          rgba(71, 139, 214, 1) 23.3%,
+          rgba(37, 216, 211, 1) 84.7%
+        );
 
-  margin-top: 3%;
-  margin-left: 15%;
-  width: 70%;
-  border-radius: 8px;
-  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.5);
+        margin-top: 3%;
+        margin-left: 32.5%;
+        width: 35%;
+        border-radius: 8px;
+        box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.5);
 
-  font-family: 'Righteous', cursive;
-  font-weight: 400;
-  font-size: 24;
-  color: rgb(255, 255, 255);
-}
+        font-family: 'Righteous', cursive;
+        font-weight: 400;
+        font-size: 24;
+        color: rgb(255, 255, 255);
+      }
 
-.conteudo-secundario-escrito {
-  background: linear-gradient(
-    180deg,
-    rgba(71, 139, 214, 1) 30%,
-    rgb(37, 216, 211, 1) 84.7%
-  );
+      .conteudo-secundario-escrito {
+        background: linear-gradient(
+          180deg,
+          rgba(71, 139, 214, 1) 30%,
+          rgb(37, 216, 211, 1) 84.7%
+        );
 
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 2%;
-  margin-left: 15%;
-  margin-bottom: 5%;
-  float: left;
+        margin-top: 2%;
+        margin-left: 32.5%;
+        margin-bottom: 5%;
 
-  padding: 20px;
-  width: 70%;
-  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.5);
-  border-radius: 8px;
-  font-family: 'sarala', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-}
+        padding-left: 9%;
+        width: 35%;
+        box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+        font-family: 'sarala', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+      }
 
+      .subtitle {
+        font-family: 'Righteous', cursive;
+        font-weight: 400;
+        font-size: 24;
+        color: rgb(255, 255, 255);
+      }
 
+      #resultado {
+        width: 70%;
 
-.subtitle {
-  font-family: 'Righteous', cursive;
-  font-weight: 400;
-  font-size: 24;
-  color: rgb(255, 255, 255);
-}
+        margin-top: 2%;
+        margin-bottom: 5%;
 
-#resultado {
-  width: 40%;
- 
-margin-top: 2%;
+        font-family: 'sarala', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+      }
 
- 
-
-  font-family: 'sarala', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-
-}
-
-.btn-grad {
-  height: 65px;
-  border: none;
-  width: 180px;
-  font-family: 'sarala', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  border-radius: 20px;
-  margin-left: 10%;
-  margin-top: 5%
-}
-.input {
-  width: 300px;
-  height: 22px;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-
-}
-
-
-  </style>
-
-
+      .btn-grad {
+        height: 65px;
+        border: none;
+        width: 180px;
+        font-family: 'sarala', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        border-radius: 20px;
+        margin-left: 10%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+      }
+      .input {
+        width: 300px;
+        height: 22px;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+      }
+    </style>
   </head>
   <body>
     <div class="conteudo-principal-escrito">
       <img src="assets/azul.png" class="logo" />
       <h1>Simulador Financeiro</h1>
-    </div >
-
-    <div  class="conteudo-secundario-escrito">
-      <div  id="left">
-      <h2 class="subtitle">Calcule seu lucro</h2>
-      <br />
-
-      Quantidade produzida em Kg (1 tanque)<br />
-      <input id="qtd_kg" class="input"/><br /><br />
-
-      Preço do Kg vendido<br />
-      <input id="preco_kg" class="input" /><br /><br />
-
-      Quantidade de tanques<br />
-      <input id="qtd_tanque" class="input" /><br />
-
-      <button class="btn-grad" onclick="toggle_btn()">Calcular</button>
-
     </div>
 
-      <div id="resultado" ></div>
+    <div class="conteudo-secundario-escrito">
+      <div>
+        <h2 class="subtitle">Calcule seu lucro</h2>
+        <br />
+
+        Quantidade produzida em Kg (1 tanque)<br />
+        <input id="qtd_kg" class="input" /><br /><br />
+
+        Preço do Kg vendido<br />
+        <input id="preco_kg" class="input" /><br /><br />
+
+        Quantidade de tanques<br />
+        <input id="qtd_tanque" class="input" /><br />
+
+        <button class="btn-grad" onclick="toggle_btn()">Calcular</button>
+      </div>
+
+      <div id="resultado"></div>
     </div>
 
-    
     <br /><br />
   </body>
 </html>
@@ -153,24 +138,18 @@ margin-top: 2%;
     var tanque = Number(qtd_kg.value)
     var v_kg = Number(preco_kg.value)
     var q_tanque = Number(qtd_tanque.value)
-    var v_tanque = (tanque * q_tanque) * v_kg
-    
-  
-    var s_projeto = v_tanque - (v_tanque / 100 * 15)
-    var c_projeto = v_tanque - (v_tanque / 100 * 2)
+    var v_tanque = tanque * q_tanque * v_kg
 
-    
+    var s_projeto = v_tanque - (v_tanque / 100) * 15
+    var c_projeto = v_tanque - (v_tanque / 100) * 2
+    var p_total = c_projeto - s_projeto
 
+    resultado.innerHTML = `
 
-    resultado.innerHTML =
-
-    `
-  
     Receita obtida sem nossa tecnologia: R$${s_projeto}<br>
-    Receita obtida com nossa tecnologia: R$${c_projeto} 
+    Receita obtida com nossa tecnologia: R$${c_projeto}<br>
+    Perda total BlueControl R$${p_total}
 
     `
-    left.style.marginLeft = "2%"
-    left.style.width = "40%"
   }
 </script>
