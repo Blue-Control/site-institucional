@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venha Nadar Na Grana</title>
+</head>
+<body background="Design sem nome.png">
+    
+    
+
+    <div style="width: 70%;">
+
+        <div style=
+        "background-color: yellow; 
+        width: 60%; height: 100px; 
+        float: right; 
+        border-radius: 3%; 
+        border: solid 4px"> 
+         <div style=
+         "background-color: blue; 
+         width: 100%; height: 10px; 
+         float: right; 
+         border-radius: 3%; "> 
+         </div>
+
+
+            <div style=
+            "width: 60%; 
+            height: 30%; " >  
+            <img src="azul.png" 
+            alt="Logo" 
+            style="height:  110px;
+             float: right;"> 
+             </div>
+
+        </div>
+            
+            
+    <div style=
+    "background-color: yellow; 
+    height: 400px; 
+    width: 60%; 
+    float: right;
+    border-radius: 3%;
+    margin-top: 1cm;
+    border: solid 4px">
+
+<div style=
+"background-color: blue; 
+width: 100%; height: 8px; 
+float: right; 
+"> 
+</div>
+
+<div style="background-color: blue; ">
+<h1> <b style=
+    "color: white; 
+    
+    font-size: 30px;">
+    Calcule seu lucro, e venha nadar conosco!!!
+</b></h1>
+</div>
+<div style="background-color: blue; height: 36%;">
+
+<div style="width: 65%; float: right; height: 30%;">
+<b style="color: white;">Quantidade em KG produzido:</b> <br> 
+
+<input id="quantidade" 
+style="border-radius: 8px; border: solid;"> <br>
+
+<b style="color: white;">Preço do KG vendido:</b> <br> 
+
+<input id="preço" 
+style="border-radius: 8px; 
+border: solid;"> <br>
+<br>
+
+<div style="float: right; width: 86%;">
+ <button onclick="resultado()" style=
+ " background-color: aquamarine; 
+ padding: 10px; 
+ border-radius: 10px;
+ border: solid; ">
+ Calcular
+</button> 
+</div>
+</div>
+</div>
+ <div id="preju" >
+
+ </div>
+
+</div>
+</div>
+
+
+</span>
+</body>
+</html>
+
+<script>
+
+function resultado()
+
+{
+var Q= Number(quantidade.value)
+var P= Number(preço.value)
+var POR= (Q*P) * 0.90
+var nosso= (Q*P) * 0.98
+
+preju.innerHTML=
+ `
+ 
+
+ <span style="font-size: 20px;"> <b>Seu lucro:</b> <b style="color: darkred"><u>R$${POR}</u></b> </span> <br>
+
+ <div style="height: 30px; width: 90% ; background-color: darkred "></div>
+
+ <span style="font-size: 20px;"><b>Seu lucro utilizando nosso produto:</b> <b style="color: green"><u>R$${nosso}</u> </b> </span><br>
+
+ <div style="height: 30px; 
+ width: 98% ; 
+ background-color: green; 
+ float: left ">
+    </div> 
+
+<div style="height: 30px; width: 100% "></div>
+ 
+
+  
+
+
+
+
+`
+
+
+
+
+}
+
+
+
+
+
+
+</script>
+
+
+
