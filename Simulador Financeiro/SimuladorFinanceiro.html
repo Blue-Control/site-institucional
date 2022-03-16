@@ -49,9 +49,10 @@
             border: 2px #252525 outset;
             border-radius: 8px;
             width: 200px;
-            height: 20px;
+            height: 22px;
             margin-left: 25%;
             font-weight: 700;
+           background-color: #ede3ef9c
         }
 
         button {
@@ -61,10 +62,10 @@
             color: white;
             border-style: outset;
             font-size: x-large;
-            border-radius: 10px;
+            border-radius: 12px;
             cursor: pointer;
             width: 55%;
-            height: 50px;
+            height: 55px;
             margin-left: 25%;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             transition: 0.5s;
@@ -88,8 +89,8 @@
         </span> <br> <br>
         <span> Preço do Kg da Tilápia: <br> <input id="precotilapia" type="number"> </span> <br> <br>
 
-            <button onclick="contas()"> Calcular </button> <br> <br> <br>
-            <div id="resultado"></div>
+            <button onclick="contas()"> Calcular </button> <br> <br> <br> <br>
+            <div id="resultado"></div> 
     </div>
 </body>
 
@@ -110,6 +111,6 @@
     <span style="color: black; margin-left: 7.5%; margin-top: 0.5%;  float: left;"> Atualmente sua perda é de <b> R$ ${perdaatual.toFixed(2)} </span> </b>  
     <br>
     <span style="color: black; margin-left: 7.5%; float: left; margin-top: 0.5%;"> Com a Blue Control sua perda será de <b> R$ ${perdablue.toFixed(2)} </b> </span>  <br>
-    <span style="color: black; margin-left: 7.5%; float: left; margin-top: 0.5%;"> Economizando assim: <b> R$${perdatotal.toFixed(2)} </span> </b> </div>  `
+    <span style="color: black; margin-left: 7.5%; float: left; margin-top: 0.5%;"> Economizando assim: <b> ${perdatotal.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})} </span> </b> </div>  `
     }
 </script>
